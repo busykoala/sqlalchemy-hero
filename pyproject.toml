@@ -1,8 +1,12 @@
 [tool.poetry]
-name = "sqlalchemy_hero"
+name = "sqlalchemy-hero"
 version = "0.1.0"
 description = "SchemaHero table generator from SQLAlchemy models."
 authors = ["Matthias Osswald <matthias@busykoala.io>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://github.com/busykoala/sqlalchemy-hero"
+keywords = ["SQLAlchemy", "SchemaHero", "GitOps", "database", "k8s"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
