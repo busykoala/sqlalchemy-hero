@@ -9,7 +9,7 @@ repository = "https://github.com/busykoala/sqlalchemy-hero"
 keywords = ["SQLAlchemy", "SchemaHero", "GitOps", "database", "k8s"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">= 3.8, < 4.0"
 SQLAlchemy = "^1.4"
 SQLAlchemy-Utils = "^0.38"
 arrow = "^1.2"
@@ -21,6 +21,7 @@ isort = "*"
 black = "*"
 pylint = "*"
 bandit = "*"
+typing-extensions = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
