@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "sqlalchemy_hero"
+version = "0.1.0"
+description = "SchemaHero table generator from SQLAlchemy models."
+authors = ["Matthias Osswald <matthias@busykoala.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+SQLAlchemy = "^1.4"
+SQLAlchemy-Utils = "^0.38"
+arrow = "^1.2"
+PyYAML = "^6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+isort = "*"
+black = "*"
+pylint = "*"
+bandit = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line_length = 120
+
+[tool.isort]
+line_length = 120
+include_trailing_comma = true
+force_single_line = true
+
+[tool.pylint.messages_control]
+# https://pylint.pycqa.org/en/latest/search.html?q=C0114
+disable = "C0114,C0115,C0116,C0103,R0903"

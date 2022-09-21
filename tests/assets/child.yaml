@@ -1,0 +1,45 @@
+apiVersion: schemas.schemahero.io/v1alpha4
+kind: Table
+metadata:
+  name: hierarchy-db-child
+  namespace: hero-ns
+spec:
+  database: hierarchy-db
+  name: child
+  schema:
+    postgres:
+      primaryKey:
+      - id
+      columns:
+      - name: id
+        type: int
+        constraints:
+          notNull: true
+        attributes: {}
+      - name: created_on
+        type: date
+        constraints: {}
+        attributes: {}
+      - name: updated_on
+        type: date
+        constraints: {}
+        attributes: {}
+      - name: name
+        type: text
+        constraints:
+          notNull: true
+        attributes: {}
+      - name: description
+        type: text
+        constraints:
+          notNull: true
+        attributes: {}
+      - name: parent_id
+        type: int
+        constraints: {}
+        attributes: {}
+      indexes:
+      - columns:
+        - description
+        name: ix_child_description
+        isUnique: false
