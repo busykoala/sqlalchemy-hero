@@ -121,5 +121,5 @@ poetry run pytest
 poetry run black .
 poetry run isort .
 poetry run pylint tests sqlalchemy_hero
-poetry run -r sqlalchemy_hero
+poetry run bandit -r sqlalchemy_hero
 ```

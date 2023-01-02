@@ -2,11 +2,11 @@ from typing import Any
 from typing import Dict
 from typing import Union
 
+from sqlalchemy import JSON
 from sqlalchemy import BigInteger
 from sqlalchemy import Boolean
 from sqlalchemy import Date
 from sqlalchemy import Integer
-from sqlalchemy import JSON
 from sqlalchemy import Numeric
 from sqlalchemy import SmallInteger
 from sqlalchemy import Text
