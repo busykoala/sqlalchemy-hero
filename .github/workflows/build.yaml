@@ -1,3 +1,5 @@
+name: CI Runner
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
