@@ -2,24 +2,42 @@ from typing import Any
 from typing import Dict
 from typing import Union
 
+from sqlalchemy import BigInteger
+from sqlalchemy import Boolean
+from sqlalchemy import Date
 from sqlalchemy import Integer
+from sqlalchemy import JSON
+from sqlalchemy import Numeric
+from sqlalchemy import SmallInteger
 from sqlalchemy import Text
+from sqlalchemy import Time
 from sqlalchemy_utils import ArrowType
 
 from sqlalchemy_hero.hero_database import HeroDatabase
 
 # https://schemahero.io/databases/postgresql/column-types/
 POSTGRES_TYPE_MAP = {
-    Integer: "int",
-    Text: "text",
     ArrowType: "date",
+    BigInteger: "bigint",
+    Boolean: "boolean",
+    Date: "date",
+    Integer: "int",
+    JSON: "json",
+    Numeric: "numeric",
+    SmallInteger: "smallint",
+    Text: "text",
+    Time: "time",
 }
+
 
 # https://schemahero.io/databases/mysql/column-types/
 MYSQL_TYPE_MAP = {
-    Integer: "int",
-    Text: "text",
     ArrowType: "date",
+    BigInteger: "bigint",
+    Date: "date",
+    Integer: "int",
+    SmallInteger: "smallint",
+    Text: "text",
 }
 
 
