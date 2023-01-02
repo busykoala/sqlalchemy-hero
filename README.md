@@ -1,10 +1,41 @@
 # SQLAlchemy Hero
 
-SQLAlchemy Hero is a package to generate table YAMLs for
-[SchemaHero](https://schemahero.io/) from a
-[SQLAlchemy](https://www.sqlalchemy.org/) Base.
+## What is SQLAlchemy Hero?
 
-Let's look at an example how to use it.
+[SchemaHero](https://schemahero.io/) lets you define declarative
+database schema migrations.
+In Python schemas are often mapped with
+[SQLAlchemy](https://www.sqlalchemy.org/) models.
+
+`SQLAlchemy Hero` is a package to generate the declarative table YAMLs for
+`SchemaHero` from your existing `SQLAlchemy` Base.
+
+## Getting Started
+
+In easy cases the below code is all you need to add to a cli script.
+The `Base` is your `DeclarativeBase` from `SQLAlchemy` and `./out` is the
+path to output the generated table schemas.
+
+```python
+from pathlib import Path
+
+from sqlalchemy_hero.hero_database import HeroDatabase
+from sqlalchemy_hero.hero_generator import HeroGenerator
+
+from my_app.models import Base
+
+hero_generator = HeroGenerator(
+    base=Base,
+    db_type=HeroDatabase.postgres,
+    namespace="hero-ns",
+    database="hero-db",
+)
+hero_generator.to_yaml_files(out_path=Path("./out"))
+```
+
+### Example with SQLAlchemy models
+
+Let's look at an example how to use it including some example models.
 There is a `Parent` and a `Child` model both
 inheriting from a abstract base model with some common fields.
 The goal is to generate the table YAML files for `SchemaHero`.
