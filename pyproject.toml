@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "sqlalchemy-hero"
-version = "0.1.0"
+version = "0.1.1"
 description = "SchemaHero table generator from SQLAlchemy models."
-authors = ["Matthias Osswald <matthias@busykoala.io>"]
+authors = ["Matthias Osswald <info@busykoala.io>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
 repository = "https://github.com/busykoala/sqlalchemy-hero"
