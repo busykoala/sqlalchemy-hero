@@ -37,4 +37,4 @@ force_single_line = true
 
 [tool.pylint.messages_control]
 # https://pylint.pycqa.org/en/latest/search.html?q=C0114
-disable = "C0114,C0115,C0116,C0103,R0903"
+disable = "C0114,C0115,C0116,C0103,R0903,W0719"
